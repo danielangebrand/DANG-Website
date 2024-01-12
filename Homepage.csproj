@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\CSS\styles.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\c--4.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\css-3.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\git-icon.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\html-1.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\ingenbakgrund.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\logo-javascript.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\microsoft-sql-server-1.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\project1.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\project2.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\project3.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\project4.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\project5.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\QuizMyApp.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\react-2.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\scrumorg-1.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\shape-circle.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\shape-wawes.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\test.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\uiux.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\user-heart-fill.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\user-heart-line.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\img\ux-ui-logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Assets\JS\main.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Components\App.razor" />
+    <None Include="Components\Layout\MainLayout.razor" />
+    <None Include="Components\Layout\NavMenu.razor" />
+    <None Include="Components\Routes.razor" />
+    <None Include="Components\_Imports.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\bootstrap\bootstrap.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\bootstrap\bootstrap.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\projects.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

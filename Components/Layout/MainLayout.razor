@@ -1,0 +1,118 @@
+﻿@using Homepage.Components.Bulletin
+@using Homepage.Components.BulletinComponent
+@using Homepage.Components.Contact
+@using Homepage.Components.Header
+@using Homepage.Components.Home
+@using Homepage.Components.Projects
+@using Homepage.Components.Qualifications
+@using Homepage.Components.Skills
+@using System.Text.Json
+@inject IWebHostEnvironment webhostEnvironment
+
+@inherits LayoutComponentBase
+
+<header class="header" id="header">
+    <Header />
+</header>
+
+<main class="main">
+
+    <section class="home section" id="home">
+        <HomeComponent />
+    </section>
+
+    <section class="skills section" id="skills">
+        <SkillsComponent />
+    </section>
+
+    <section class="qualification section" id="qualification">
+        <QualificationsComponent />
+    </section>
+
+    <section class="projects section" id="projects">
+        <ProjectsComponent projects="@projects" />
+    </section>
+
+    <section class="bulletin section" id="bulletin">
+        <BulletinComponent Bulletines="@bulletines" />
+    </section>
+
+    <section class="contact section" id="contact">
+        <ContactComponent />
+    </section>
+
+</main>
+
+<footer class="footer">
+    <FooterComponent />
+</footer>
+
+<!--========== SCROLL UP ==========-->
+<a href="" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+</a>
+
+@code {
+
+    private static List<Project> projects = new()
+    {
+        new Project
+        {
+            Image = "/assets/img/DoD.png",
+            Subtitle = "(WIP) RPG game made w. Blazor & .NET 7, testing design patterns",
+            Title = "Dungeons of Doom",
+            GithubLink = "https://github.com/danielangebrand/BlazorRPG",
+            ActiveLink = "https://github.com/danielangebrand/BlazorRPG"
+        },
+        new Project
+        {
+            Image = "/assets/img/project2.jpg",
+            Subtitle = "This website",
+            Title = "danielangebrand.com",
+            GithubLink = "https://github.com/danielangebrand/danielangebrand",
+            ActiveLink = "#"
+        },
+        new Project
+        {
+            Image = "/assets/img/project3.jpg",
+            Subtitle = "Examination group project. Quiz-App.",
+            Title = "Trivia Royale",
+            GithubLink = "https://github.com/joakim-lignerkrona/AW-Slutprojekt/",
+            ActiveLink = "https://github.com/joakim-lignerkrona/AW-Slutprojekt/"
+        }
+    };
+
+    private static List<Bulletine> bulletines = new()
+    {
+        new Bulletine()
+        {
+            FullName = "Johanna Lannerstedt",
+            Relationship = "Classmate",
+            Message = "”Daniel was so great to study with during our C# .Net Fullstack accelerated learning course with Brights. Curious, humble and fun, Daniel really played a significant part in bringing the class together and creating a great space for learning, with and from eachother.”"
+        },
+        new Bulletine()
+        {
+            FullName = "Björn Arkö",
+            Relationship = "Colleague",
+            Message = "”Worked with Daniel closely for many years in various music projects. Daniel is always professional and aims to make things at the highest level possible. He also have the gift to make everyone around him feel at ease and have a good time.”"
+        },
+        new Bulletine()
+        {
+            FullName = "F",
+            Relationship = "Classmate",
+            Message = "”Killen är alltid glad, dessutom är han är riktigt kärleksfull glädjespridare. Om du gillar att vara glad, this is the guy! Bor lite långt bort men hade varit grymt att hamna på samma arbetsplats som dig. “One good thing about music, when it hits you, you feel no pain.”"
+        },
+        new Bulletine()
+        {
+            FullName = "Robert Pihl",
+            Relationship = "Colleague",
+            Message = "”It's always a pleasure working with Daniel on our music projects.”"
+        },
+        new Bulletine()
+        {
+            FullName = "Niklas",
+            Relationship = "Friend and classmate",
+            Message = "”Du är bäst, Daniel. Älskar dig. Snälla svara.”"
+        }
+    };
+}

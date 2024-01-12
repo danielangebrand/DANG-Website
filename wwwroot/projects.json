@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "image": "DoD.png",
+      "subtitle": "WIP - RPG game made w. Blazor & .NET 7",
+      "title": "Dungeons of Doom",
+      "githubLink": "https://github.com/danielangebrand/BlazorRPG",
+      "activeLink": ""
+    },
+    {
+      "image": "project2.jpg",
+      "subtitle": "This site.",
+      "title": "danielangebrand.com",
+      "githubLink": "https://github.com/user/project2",
+      "activeLink": "https://danielangebrand.com"
+    },
+    {
+      "image": "project3.jpg",
+      "subtitle": "Examination project",
+      "title": "Trivia Royale",
+      "githubLink": "https://github.com/joakim-lignerkrona/AW-Slutprojekt/",
+      "activeLink": "https://user.github.io/project3"
+    }
+  ]
+}

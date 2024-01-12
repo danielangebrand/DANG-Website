@@ -1,0 +1,39 @@
+@using Homepage.Components.BulletinComponent
+<section class="bulletin section" id="bulletin">
+    <h2 class="section__title">Bulletin board</h2>
+    <span class="section__subtitle">Here you can read comments about me. </span>
+    <div class="container section__border">
+        <div class="bulletin__container swiper">
+            <div class="swiper-wrapper">
+                <!--==================== Note 1 ====================-->
+                @foreach (var bulletin in Bulletines)
+                {
+                    <div class="bulletin__content swiper-slide">
+                        <p class="bulletin__description">
+                            <i>
+                                @bulletin.Message
+                            </i>
+                        </p>
+
+                        <div>
+                            <h3 class="bulletin__name">@bulletin.FullName</h3>
+                            <span class="subtitle">@bulletin.Relationship</span>
+                        </div>
+                    </div>
+                }
+            </div>
+                <!-- Swiper arrowZ -->
+                <div class="swiper-button-next">
+                    <i class="ri-arrow-right-s-line"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="ri-arrow-left-s-line"></i>
+                </div>
+        </div>
+    </div>
+    <img src="/assets/img/shape-wawes.svg" alt="bulletin image" class="bulletin__img">
+</section>
+@code {
+    [Parameter]
+    public List<Bulletine> Bulletines { get; set; } = new();
+}

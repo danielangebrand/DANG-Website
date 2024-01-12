@@ -1,0 +1,47 @@
+<h2 class="section__title">Projects</h2>
+<span class="section__subtitle">Sample of projects</span>
+<div class="container section__border">
+    <div class="projects__container swiper">
+        <div class="swiper-wrapper">
+            @foreach (var project in Projects)
+            {
+                <div class="projects__content swiper-slide">
+                    <img src="@project.Image" alt="projects image" class="projects__img">
+                    <div>
+                        <span class="projects__subtitle">@project.Subtitle </span>
+                        <h1 class="projects__title">
+                            @project.Title
+                        </h1>
+                        <div class="home__social" style="justify-content: center">
+                            <a href="@project.GithubLink" target="_blank" class="home__social-link">
+                                <i class="ri-github-line"></i>
+                            </a>
+           
+                            @if (!string.IsNullOrEmpty(project.ActiveLink))
+                            {
+                                <a href="@project.ActiveLink" target="_blank" class="projects__button">
+                                    <p class="projects__subtitle">Visit </p> <i class="ri-arrow-right-line"></i>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <!-- swiper arrows -->
+        <div class="swiper-button-next">
+            <i class="ri-arrow-right-s-line"></i>
+        </div>
+        <div class="swiper-button-prev">
+            <i class="ri-arrow-left-s-line"></i>
+        </div>
+
+        <!-- swiper pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public List<Project> Projects { get; set; } = new();
+}

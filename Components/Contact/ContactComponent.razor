@@ -1,0 +1,71 @@
+﻿    <h2 class="section__title">Contact me</h2>
+    <span class="section__subtitle">Get in touch</span>
+    <div class="contact__container container grid section__border">
+        <div class="contact__content">
+            <h3 class="contact__title">
+                <i class="ri-chat-3-line"></i> I love to chat!
+            </h3>
+            <div class="contact__info">
+                <div class="contact__data">
+                    <span class="contact__data-title">Social</span>
+                    <span class="contact__data-info"></span>
+                    <a href="https://www.linkedin.com/in/daniel-angebrand-7b384824b/" target="_blank" class="contact__button">
+                        <i class=ri-linkedin-box-line> LinkedIn</i>
+                    </a>
+                </div>
+                <div class="contact__data">
+                    <span class="contact__data-title">Mail</span>
+                    <span class="contact__data-info"></span>
+                    <a href="mailto: danielangebrand@outlook.com" class="contact__button">
+                        <i class="ri-mail-send-line"></i>
+                    </a>
+                </div>
+
+                <div class="contact__data">
+                    <span class="contact__data-title">Phone</span>
+                    <span class="contact__data-info"></span>
+                    <a href="tel:+4670-5408363" class="contact__button">
+                        <i class="ri-phone-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--====================  Contact form ====================-->
+
+        <div class="contact__content">
+            <h3 class="contact__title">
+                <i class="ri-send-plane-line"></i> Leave a comment!
+            </h3>
+            <form action="" class="contact__form" id="contact-form">
+                <div class="contact__form-div">
+                    <label class="contact__form-tag">Name</label>
+                    <input type="text" name="user_name" required placeholder="Name required" class="contact__form-input" id="contact-name">
+                </div>
+
+                <div class="contact__form-div">
+                    <label class="contact__form-tag">Relationship</label>
+                    <input type="text" name="user_label" placeholder="Friend, classmate, colleague.. " class="contact__form-input" id="contact-label">
+                </div>
+
+                <div class="contact__form-div">
+                    <label class="contact__form-tag">Mail</label>
+                    <input type="email" name="user_mail" required placeholder="Mail required" class="contact__form-input" id="contact-mail">
+                </div>
+
+                <div class="contact__form-div contact__form-area">
+                    <label class="contact__form-tag">Message</label>
+                    <textarea name="message" required placeholder="Send some love for me!" id="contact-message" class="contact__form-input"></textarea>
+                </div>
+
+                <p class="contact__errorMessage" id="contact-errorMessage"></p>
+
+                <button type="submit" class="contact__button">
+                    Submit <i class="ri-arrow-right-up-line"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+@code {
+
+}
