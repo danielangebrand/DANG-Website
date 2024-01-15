@@ -328,7 +328,6 @@ body.dark-theme {
 }
 
     .home__profile img {
-        /* width: 150px; */
         height: 240px;
     }
 
@@ -529,7 +528,7 @@ body.dark-theme {
     margin-bottom: .75rem;
 }
 
-.qualification__info-description {
+/*.qualification__info-description {
     width: 50%;
     box-sizing: border-box;
     padding: 10px;
@@ -539,7 +538,7 @@ body.dark-theme {
     font-weight: 400;
     color: var(--text-color-light);
     margin-bottom: 1rem;
-}
+}*/
 
 .qualification__img {
     width: 150px;
@@ -551,7 +550,7 @@ body.dark-theme {
 }
 
 
-/*=============== SERVICES ===============*/
+/*=============== SERVICES FOR DA FUTURE ===============*/
 
 
 /*=============== PROJECTS ===============*/
